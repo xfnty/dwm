@@ -9,10 +9,16 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 No patches here. It's the original dwm source code.
 
 
+## Theme
+- Pallette: `#EB3232`, `#EB7547`, `#141414`
+- Font: `Hack Nerd Font:size=9`
+- Background: [link](https://rare-gallery.com/uploads/posts/924281-minimalism-red-simple-background-digital-art.png)
+
+
 ## Requirements
 Arch Linux
 ```
-sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-jetbrains-mono
+sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-hack-nerd
 ```
 
 
@@ -23,23 +29,17 @@ the `/usr/local` namespace by default).
 Afterwards enter the following command to build and install dwm (if
 necessary as root):
 ```
-make clean install
+sudo make clean install
 ```
 
 
 ## Running dwm
-Add the following line to your .xinitrc to start dwm using startx:
+Add the following line to your `.xinitrc` to start dwm using startx:
 ```
 exec dwm
 ```
-In order to connect dwm to a specific display, make sure that
-the DISPLAY environment variable is set correctly, e.g.:
-```
-DISPLAY=foo.bar:1 exec dwm
-```
-(This will start dwm on display :1 of the host foo.bar.)
 
 
 ## Configuration
-The configuration of dwm is done by creating a custom config.h
+The configuration of dwm is done by editing `config.def.h`
 and (re)compiling the source code.
