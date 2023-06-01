@@ -5,6 +5,10 @@
 It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 
 
+## Patches
+No patches here. It's the original dwm source code.
+
+
 ## Requirements
 Arch Linux
 ```
