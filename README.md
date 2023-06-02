@@ -6,7 +6,8 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 
 
 ## Patches
-No patches here. It's the original dwm source code.
+- [colorbar](https://dwm.suckless.org/patches/colorbar/)
+- [cool autostart](https://dwm.suckless.org/patches/cool_autostart/)
 
 
 ## Theme
