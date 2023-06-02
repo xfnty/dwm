@@ -25,6 +25,10 @@ static const char *colors[][3]      = {
     [SchemeInfoNorm]   = { col_lightgray,  col_dark,    col_ignore  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
+static const char *const autostart[] = {
+   NULL,
+};
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -72,7 +76,7 @@ static const char *waterfox_cmd[]  = { "waterfox", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ Mod4Mask,                     XK_w,      spawn,          {.v = termcmd } },
     { Mod4Mask,                     XK_f,      spawn,          {.v = sublime_cmd } },
     { Mod4Mask,                     XK_b,      spawn,          {.v = waterfox_cmd } },
 	// { MODKEY,                       XK_b,      togglebar,      {0} },

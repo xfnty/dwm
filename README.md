@@ -8,6 +8,7 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 ## Patches
 - [colorbar](https://dwm.suckless.org/patches/colorbar/)
 - [remove-border](https://dwm.suckless.org/patches/removeborder/)
+- [cool autostart](https://dwm.suckless.org/patches/cool_autostart/)
 
 
 ## Theme
