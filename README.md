@@ -7,24 +7,20 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 
 ## Patches
 - [colorbar](https://dwm.suckless.org/patches/colorbar/)
-- [cool autostart](https://dwm.suckless.org/patches/cool_autostart/)
+- [cool-autostart](https://dwm.suckless.org/patches/cool_autostart/)
 - [autostart](https://dwm.suckless.org/patches/autostart/)
 
 
 ## Theme
-- Pallette: `#EB3232`, `#EB7547`, `#141414`
-- Font: `Hack Nerd Font:size=9`
+- Pallette: ([link](https://colorkit.co/palette/222222-444444-BBBBBB-F5F5F5-EB3232-FFAC4E/))
+- Font: `monospace:size=9`
 - Background: [link](https://rare-gallery.com/uploads/posts/924281-minimalism-red-simple-background-digital-art.png)
 
 
 ## Requirements
 Arch Linux
 ```
-sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-hack-nerd
-```
-SWitch keyboard layout:
-```
-localectl --no-convert set-x11-keymap us,ru grp:win_space_toggle
+sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig
 ```
 
 
