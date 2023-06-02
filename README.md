@@ -21,6 +21,10 @@ Arch Linux
 ```
 sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig ttf-hack-nerd
 ```
+SWitch keyboard layout:
+```
+localectl --no-convert set-x11-keymap us,ru grp:win_space_toggle
+```
 
 
 ## Installation
