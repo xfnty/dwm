@@ -2,25 +2,27 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int snap      = 16;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=9" };
-static const char dmenufont[]       = "monospace:size=9";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#EB3232";
+static const char dmenufont[]       =   "monospace:size=9";
+static const char col_ignore[]      = "#FF00D0";
+static const char col_dark[]        = "#222222";
+static const char col_gray[]        = "#444444";
+static const char col_lightgray[]   = "#A8A8A8"; // BBBBBB
+static const char col_light[]       = "#F5F5F5";
+static const char col_primary[]     = "#EB3232";
+static const char col_secondary[]   = "#FFAC4E";
 static const char *colors[][3]      = {
-	/*               fg         bg         border */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray1, col_cyan,  col_cyan },
-    [SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-    [SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	/*                     fg              bg           border */
+	[SchemeNorm]       = { col_lightgray,  col_dark,    col_gray },
+	[SchemeSel]        = { col_dark,       col_dark,    col_primary },
+    [SchemeStatus]     = { col_secondary,  col_dark,    col_ignore  }, // Statusbar right {text,background,not used but cannot be empty}
+    [SchemeTagsSel]    = { col_light,      col_primary, col_ignore  }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]   = { col_lightgray,  col_dark,    col_ignore  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]    = { col_lightgray,  col_dark,    col_ignore  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]   = { col_lightgray,  col_dark,    col_ignore  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -31,12 +33,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "waterfox", NULL,       NULL,       1,            0,           -1 },
+	/* class          instance    title       tags mask     isfloating   monitor */
+	{ "waterfox",     NULL,       NULL,       1,            0,           -1 },
+    { "sublime_text", NULL,       NULL,       2,            0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.65; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.70; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -57,11 +60,11 @@ static const Layout layouts[] = {
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+#define SHCMD(cmd) { .v = (const char*[]){ "/usr/local/bin/st", "-c", cmd, NULL } }
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_dark, "-nf", col_lightgray, "-sb", col_primary, "-sf", col_light, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *sublime_cmd[]  = { "sublime", NULL };
 static const char *waterfox_cmd[]  = { "waterfox", NULL };
@@ -81,7 +84,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,                       XK_F4,     killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },

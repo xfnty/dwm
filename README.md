@@ -6,11 +6,12 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 
 
 ## Patches
-No patches here. It's the original dwm source code.
+- [colorbar](https://dwm.suckless.org/patches/colorbar/)
+- [remove-border](https://dwm.suckless.org/patches/removeborder/)
 
 
 ## Theme
-- Pallette: `#EB3232`, `#EB7547`, `#141414`
+- Pallette: `#EB3232`, `#EB7547`/`#FFAC4E`, `#141414` ([link](https://colorkit.co/palette/222222-444444-BBBBBB-F5F5F5-EB3232-FFAC4E/))
 - Font: `Hack Nerd Font:size=9`
 - Background: [link](https://rare-gallery.com/uploads/posts/924281-minimalism-red-simple-background-digital-art.png)
 
