@@ -1,4 +1,5 @@
-![dwm logo](dwm.png)
+![screenshot](screenshot.png)
+
 
 # dwm - dynamic window manager
 [dwm](dwm.suckless.org) is an extremely fast, small, and dynamic window manager for X.
