@@ -15,7 +15,7 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 
 
 ## Theme
-- Pallette: ([link](https://colorkit.co/palette/222222-444444-BBBBBB-F5F5F5-EB3232-FFAC4E/))
+- Pallette: [link](https://colorkit.co/palette/222222-444444-BBBBBB-F5F5F5-EB3232-FFAC4E/)
 - Background: [link](https://rare-gallery.com/uploads/posts/924281-minimalism-red-simple-background-digital-art.png)
 - Font: `monospace:size=9`
 
