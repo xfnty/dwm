@@ -10,7 +10,7 @@ static const char dmenufont[]       =   "monospace:size=9";
 static const char col_ignore[]      = "#FF00D0";
 static const char col_dark[]        = "#222222";
 static const char col_gray[]        = "#444444";
-static const char col_lightgray[]   = "#A8A8A8"; // BBBBBB
+static const char col_lightgray[]   = "#A8A8A8";
 static const char col_light[]       = "#F5F5F5";
 static const char col_primary[]     = "#EB3232";
 static const char col_secondary[]   = "#FFAC4E";
@@ -21,7 +21,7 @@ static const char *colors[][3]      = {
     [SchemeStatus]     = { col_secondary,  col_dark,    col_ignore  }, // Statusbar right {text,background,not used but cannot be empty}
     [SchemeTagsSel]    = { col_light,      col_primary, col_ignore  }, // Tagbar left selected {text,background,not used but cannot be empty}
     [SchemeTagsNorm]   = { col_lightgray,  col_dark,    col_ignore  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]    = { col_lightgray,  col_dark,    col_ignore  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]    = { col_light,      col_dark,    col_ignore  }, // infobar middle  selected {text,background,not used but cannot be empty}
     [SchemeInfoNorm]   = { col_lightgray,  col_dark,    col_ignore  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 

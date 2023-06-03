@@ -10,6 +10,7 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 - [remove-border](https://dwm.suckless.org/patches/removeborder/)
 - [cool autostart](https://dwm.suckless.org/patches/cool_autostart/)
 - [autostart](https://dwm.suckless.org/patches/autostart/)
+- [fancybar](https://dwm.suckless.org/patches/fancybar/)
 
 
 ## Theme
