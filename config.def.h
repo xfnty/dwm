@@ -31,7 +31,6 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-    "sxhkd", NULL,
     NULL,
 };
 
