@@ -18,6 +18,7 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 **TODO:**
 - Make dwm hide borders when only one window is on the screen
 - Make a hotkey to maximize active window in floating mode
+- Fix broken window layout button
 
 
 ## Theme
