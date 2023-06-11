@@ -15,6 +15,10 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 - [systray](https://dwm.suckless.org/patches/systray/)
 - [statuscmd](https://dwm.suckless.org/patches/statuscmd/)
 
+**TODO:**
+- Make dwm hide borders when only one window is on the screen
+- Make a hotkey to maximize active window in floating mode
+
 
 ## Theme
 - Pallette: [link](https://colorkit.co/palette/222222-444444-BBBBBB-F5F5F5-EB3232-FFAC4E/)
