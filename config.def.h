@@ -78,7 +78,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_dark, "-nf", col_lightgray, "-sb", col_primary, "-sf", col_light, NULL };
-static const char *termcmd[]  = { "kitty", "-1" };
+static const char *filemgr[]  = { "kitty", "lf", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 static const char *sublime_cmd[]  = { "sublime", NULL };
 static const char *waterfox_cmd[]  = { "waterfox", NULL };
 
@@ -88,6 +89,7 @@ static const Key keys[] = {
 	{ APPKEY,               XK_w,                      spawn,          {.v = termcmd } },
     { APPKEY,               XK_f,                      spawn,          {.v = sublime_cmd } },
     { APPKEY,               XK_b,                      spawn,          {.v = waterfox_cmd } },
+    { APPKEY,               XK_e,                      spawn,          {.v = filemgr } },
 	{ MODKEY,               XK_j,                      focusstack,     {.i = +1 } },
 	{ MODKEY,               XK_k,                      focusstack,     {.i = -1 } },
 	{ MODKEY,               XK_i,                      incnmaster,     {.i = +1 } },
