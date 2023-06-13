@@ -15,6 +15,7 @@ It is also has [page](https://wiki.archlinux.org/title/dwm) on Arch Wiki.
 - [pertag](https://dwm.suckless.org/patches/pertag/)
 - [systray](https://dwm.suckless.org/patches/systray/)
 - [statuscmd](https://dwm.suckless.org/patches/statuscmd/)
+- [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 
 
 ## Theme

@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 16;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
@@ -58,6 +58,7 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	// { "[M]",      monocle },
+    { NULL,       NULL },    /* cyclelayout() stop */
 };
 
 /* key definitions */
@@ -85,32 +86,28 @@ static const char *sublime_cmd[]  = { "sublime", NULL };
 static const char *waterfox_cmd[]  = { "waterfox", NULL };
 
 static const Key keys[] = {
-	/* modifier             key        function        argument */
-	{ APPKEY,               XK_Return,                 spawn,          {.v = dmenucmd } },
-	{ APPKEY,               XK_w,                      spawn,          {.v = termcmd } },
-    { APPKEY,               XK_f,                      spawn,          {.v = sublime_cmd } },
-    { APPKEY,               XK_b,                      spawn,          {.v = waterfox_cmd } },
-    { APPKEY,               XK_e,                      spawn,          {.v = filemgr } },
-	{ MODKEY,               XK_Tab,                    focusstack,     {.i = +1 } },
-	// { MODKEY,               XK_k,                      focusstack,     {.i = -1 } },
-	// { MODKEY,               XK_i,                      incnmaster,     {.i = +1 } },
-	// { MODKEY,               XK_d,                      incnmaster,     {.i = -1 } },
-	{ MODKEY,               XK_h,                      setmfact,       {.f = -0.05} },
-	{ MODKEY,               XK_l,                      setmfact,       {.f = +0.05} },
-	{ MODKEY,               XK_F4,                     killclient,     {0} },
-	{ MODKEY,               XK_q,                      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,               XK_w,                      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,               XK_grave,                  togglefloating, {0} },
-	TAGKEYS(                XK_1,                                      0)
-	TAGKEYS(                XK_2,                                      1)
-	TAGKEYS(                XK_3,                                      2)
-	TAGKEYS(                XK_4,                                      3)
-	TAGKEYS(                XK_5,                                      4)
-	TAGKEYS(                XK_6,                                      5)
-	TAGKEYS(                XK_7,                                      6)
-	TAGKEYS(                XK_8,                                      7)
-	TAGKEYS(                XK_9,                                      8)
-	{ MODKEY|ShiftMask,     XK_q,                      quit,           {0} },
+	/* modifier             key            function        argument */
+	{ APPKEY,               XK_Return,     spawn,          {.v = dmenucmd } },
+	{ APPKEY,               XK_w,          spawn,          {.v = termcmd } },
+    { APPKEY,               XK_f,          spawn,          {.v = sublime_cmd } },
+    { APPKEY,               XK_b,          spawn,          {.v = waterfox_cmd } },
+    { APPKEY,               XK_e,          spawn,          {.v = filemgr } },
+	{ MODKEY,               XK_Tab,        focusstack,     {.i = +1 } },
+	{ MODKEY,               XK_h,          setmfact,       {.f = -0.05} },
+	{ MODKEY,               XK_l,          setmfact,       {.f = +0.05} },
+	{ MODKEY,               XK_F4,         killclient,     {0} },
+	{ MODKEY,               XK_q,          cyclelayout,      {.i = +1} },
+	{ MODKEY,               XK_grave,      togglefloating, {0} },
+	TAGKEYS(                XK_1,          0)
+	TAGKEYS(                XK_2,          1)
+	TAGKEYS(                XK_3,          2)
+	TAGKEYS(                XK_4,          3)
+	TAGKEYS(                XK_5,          4)
+	TAGKEYS(                XK_6,          5)
+	TAGKEYS(                XK_7,          6)
+	TAGKEYS(                XK_8,          7)
+	TAGKEYS(                XK_9,          8)
+	{ MODKEY|ControlMask,   XK_BackSpace,  quit,           {0} },
 };
 
 /* button definitions */
